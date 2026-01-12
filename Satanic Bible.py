@@ -7,7 +7,13 @@ print("=" * 60)
 while cycle:
     count2 += 1
     print("Введите первое число")
-    chislo1 = int(input())
+    while True:
+        try:
+            chislo1 = int(input())
+            break
+        except ValueError:
+            count += 1
+            print("Введите число!")
     print("Что вы хотите сделать : ?Выберите либо первое либо второе.(1/2)")
     print("1)операции с числом")
     print("2)анализ числа")
@@ -27,7 +33,13 @@ while cycle:
         deistvia = input()
         if deistvia == "1": #сложение
             print("Введите второе число")
-            chislo2 = int(input())
+            while True:
+                try:
+                    chislo2 = int(input())
+                    break
+                except ValueError:
+                    count += 1
+                    print("Введите число!")
             result = chislo1 + chislo2
             print(f"Ваш ответ : {result}")
             print("Хотите продолжить?(да/нет)")
@@ -44,7 +56,13 @@ while cycle:
                     print("Введите корректный ответ!")
         elif deistvia == "2": #вычитание
             print("Введите второе число")
-            chislo2 = int(input())
+            while True:
+                try:
+                    chislo2 = int(input())
+                    break
+                except ValueError:
+                    count += 1
+                    print("Введите число!")
             result = chislo1 - chislo2
             print(f"Ваш ответ : {result}")
             print("Хотите продолжить?(да/нет)")
@@ -61,7 +79,13 @@ while cycle:
                     print("Введите корректный ответ!")
         elif deistvia == "3": #умножение
             print("Введите второе число")
-            chislo2 = int(input())
+            while True:
+                try:
+                    chislo2 = int(input())
+                    break
+                except ValueError:
+                    count += 1
+                    print("Введите число!")
             result = chislo1 * chislo2
             print(f"Ваш ответ : {result}")
             print("Хотите продолжить?(да/нет)")
@@ -78,7 +102,13 @@ while cycle:
                     print("Введите корректный ответ!")     
         elif deistvia == "4": #деление
             print("Введите второе число")
-            chislo2 = int(input())
+            while True:
+                try:
+                    chislo2 = int(input())
+                    break
+                except ValueError:
+                    count += 1
+                    print("Введите число!")
             result = chislo1 / chislo2
             print(f"Ваш ответ : {result}")
             print("Хотите продолжить?(да/нет)")
@@ -95,7 +125,13 @@ while cycle:
                     print("Введите корректный ответ!")         
         elif deistvia == "5": #целочисленное деление
             print("Введите второе число")
-            chislo2 = int(input())
+            while True:
+                try:
+                    chislo2 = int(input())
+                    break
+                except ValueError:
+                    count += 1
+                    print("Введите число!")
             result = chislo1 // chislo2
             print(f"Ваш ответ : {result}")
             print("Хотите продолжить?(да/нет)")
@@ -112,7 +148,13 @@ while cycle:
                     print("Введите корректный ответ!") 
         elif deistvia == "6": #взятие остатка
             print("Введите второе число")
-            chislo2 = int(input())
+            while True:
+                try:
+                    chislo2 = int(input())
+                    break
+                except ValueError:
+                    count += 1
+                    print("Введите число!")
             result = chislo1 % chislo2
             print(f"Ваш ответ : {result}")
             print("Хотите продолжить?(да/нет)")
@@ -129,7 +171,13 @@ while cycle:
                     print("Введите корректный ответ!")                                                                                   
         elif deistvia == "7": #возведение в степень
             print("Введите второе число")
-            chislo2 = int(input())
+            while True:
+                try:
+                    chislo2 = int(input())
+                    break
+                except ValueError:
+                    count += 1
+                    print("Введите число!")
             result = chislo1 ** chislo2
             print(f"Ваш ответ : {result}")
             print("Хотите продолжить?(да/нет)")
@@ -194,6 +242,12 @@ while cycle:
                     break
                 else:
                     print("Введите корректный ответ!")   
+    elif otvet1 == "2":
+        hasan_payker = len(abs(chislo1))
+        if chislo1 % 2 == 0:
+            chet = 1
+        elif chislo1 % 2 == 0:
+            chet = 0
 counter = count - count2
 if counter == 0:
     print("Вы большой молодец!!! Спасибо что не дурачились!")
